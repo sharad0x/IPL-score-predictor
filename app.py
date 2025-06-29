@@ -59,3 +59,7 @@ if st.button('Predict Score'):
     
     result = pipe.predict(input_df)
     st.header(f'Predicted Score: {int(result[0])}')
+
+if __name__=='__main__':
+    st.write("This app is running locally. You can deploy it using Streamlit sharing or any other platform.")
+    st.write("For more information, visit the [Streamlit documentation](https://docs.streamlit.io/).")
