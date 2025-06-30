@@ -33,15 +33,15 @@ def main():
     col3,col4,col5 = st.columns(3)
 
     with col3:
-        current_score = st.number_input('Current Score', min_value=0, format="%d")
+        current_score = st.number_input('Current Score', min_value=0, max_value=1000, format="%d")
 
     with col4:
-        overs = st.number_input('Overs done(works for over>5)', min_value=5.0)
+        overs = st.number_input('Overs done(works for over>5)', min_value=5, max_value=19, format="%d")
 
     with col5:
-        wickets = st.number_input('Wickets out', min_value=0, format="%d")
+        wickets = st.number_input('Wickets out', min_value=0, max_value=10, format="%d")
 
-    last_five = st.number_input('Last 5 overs score', min_value=0, value=0, format="%d")
+    last_five = st.number_input('Last 5 overs score', min_value=0,max_value=500, value=0, format="%d")
 
     if st.button('Predict Score'):
         balls_left = 120 - (overs * 6)
@@ -59,7 +59,7 @@ def main():
                                 })
         
         result = pipe.predict(input_df)
-        st.header(f'Predicted Score: {int(result[0])}')
+        st.header(f'Predicted Score: {int(result[0])-5} - {int(result[0])+5}')
 
 if __name__=='__main__':
     main()
