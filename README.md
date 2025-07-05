@@ -18,7 +18,7 @@ The machine learning model for this predictor was trained and optimized separate
 Check out the live deployed app here:  
 👉 [IPL 1st Innings Score Predictor on Streamlit](https://ipl-1st-inning-score-predictor.streamlit.app/)
 
-![App Screenshot](screenshot.png)
+![App Screenshot](Prediction_after_8_overs.png)
 
 
 ---
