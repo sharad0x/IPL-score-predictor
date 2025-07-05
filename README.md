@@ -18,7 +18,23 @@ The machine learning model for this predictor was trained and optimized separate
 Check out the live deployed app here:  
 👉 [IPL 1st Innings Score Predictor on Streamlit](https://ipl-1st-inning-score-predictor.streamlit.app/)
 
-![App Screenshot](Prediction_after_8_overs.png)
+<p align="center">
+  <img src="Real_score.png" width="45%" />
+  &nbsp;
+  <img src="Prediction_after_8_overs.png" width="45%" />
+</p>
+
+## Example
+
+For illustration, consider the above match scenario:
+
+- **Match**: RCB vs PBKS, held in Ahmedabad  
+- **Batting**: RCB (first innings)  
+- **Overs completed**: 8  
+- **Current score**: 69 runs for 2 wickets  
+- **Last 5 overs runs**: 9, 7, 9, 6, 8 (total 39 runs)
+
+Feeding these details into the model predicted a first-innings total in the range of **184–194 runs**. The actual final first-innings score turned out to be **190 runs for 9 wickets**, demonstrating good predictive performance with approximately 96% accuracy.
 
 
 ---
